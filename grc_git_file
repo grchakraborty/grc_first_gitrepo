@@ -1,9 +1,889 @@
-# *** Add user inputs in a list 
- def list_add():
+todo *** String details and examples ***
+name = "gouranjan chakraborty"
+address = ("East Katal Para\nMadral Road \t\t Naihati")
+\t is tab & \n is new line
+quote = "My name is Anthony Gonjalves.  I live at   Naihati.Very old and beautiful  city." #double space in a sentence
+quote1=quote.find("  ")
+quote2=quote.replace("  ","")
+print(quote1)
+print(quote2)
+print(len(name))
+print(name[6:])
+print(name.endswith("ty"))
+print(name.count("go"))
+print(name.capitalize())
+print(name.find("ch"))
+String replacement:
+name = "gouranjan go chakraborty"
+address = ("East Katal Para\nMadral Road \t\t Naihati")#\t is tab & \n is new line
+print(name.replace("chakraborty","chatterjee"))
+print(address.replace("Katal","Kanthal"))
+name = input("Enter your name : ")
+date = input("Enter your suitable date : ")
+selection ="Congrats !!! Dear customer your booking request for the Ladakh trip of date is available."
+selection = selection.replace("customer",name)
+selection = selection.replace("date",date)
+print(selection)
+todo *** Add user inputs in a list ***
+def list_add():
     s = []
-     n =int(input("How many numbers do you have ? : "))
-     for i in range(n):
-         x = int(input("Enter your no. : "))
-         s.append(x)
-     print("Your numbers are : " , s)
- list_add()
+    n =int(input("How many numbers do you have ? : "))
+    for i in range(n):
+        x = int(input("Enter your no. : "))
+        s.append(x)
+    print("Your numbers are : " , s)
+list_add()
+todo *** Sum of numbers in a given list ***
+    c=0
+    for k in s:
+        c = c + k
+    print("The SUM of the numbers : ",c)
+list_add()
+todo *** The user input no. is Prime or composite ***
+n = int(input("Enter a number : "))
+#Prime or composite
+for i in range(2,n-1):
+    if n % i == 0:
+        print("The given no. is composite")
+        break
+else:
+    print("The given no. is prime")
+todo *** Function to find a user given number is prime or composite ***
+def prime_compo():
+    n = int(input("Enter a number : "))
+    for i in range(2,n-1):
+        if n % i == 0:
+            print("The given no. is composite")
+            return False
+    else:
+        print("The given no. is prime")
+        return True
+prime_compo()
+todo *** Using the function find prime or composite numbers from a list ***
+lst = [12,54,87,91,31,41,29]
+prime = []
+compo = []
+n = 0
+while n < len(lst):
+    if prime_compo(lst[n]):
+        prime.append(lst[n])
+    else:
+        compo.append(lst[n])
+    n = n + 1
+print("The prime numbers are : ", end = " ")
+for m in prime:
+    print(m, end = " ")
+print()
+# print(compo)
+print("The composite numbers are : ", end = " ")
+for m in compo:
+    print(m, end = " ")
+else:
+    print("Pri")
+
+todo *** Find even and odd nos. from a list ***
+x = [12,21,33,45,87,64]
+even = []
+odd = []
+n = 0
+while n < len(x):
+    if x[n] % 2 == 0:
+        even.append(x[n])
+    else:
+        odd.append(x[n])
+    n = n + 1
+c1 = len(even)
+c2 = len(odd)
+print(f'There are {c1} even nos. : {even}')
+print(f'There are {c2} odd nos. : {odd}')
+todo *** A simple calculator ***
+a = int(input("Enter the 1st value : "))
+b = int(input("Enter the 2nd value : "))
+print('Operators are --> +, -, * , /')
+opr = input("Enter the operator: ")
+if opr=='+' :
+    print("The sum of two nos. : ",a+b)
+elif opr == '-':
+    print("The difference of two nos. : ", abs(a - b))
+elif opr == '*':
+    print("The product of two nos. : ", (a * b))
+elif opr == '-':
+    print("The division of two nos. : ", (a /b))
+else:
+    print('''***Please choose your operator properly
+& start your program again***''')
+
+todo *** Search a number from a list ***
+def search(list,n):
+    i = 0
+    c=1
+    while i < len(list):
+        if list[i] == n:
+            print(f'The given number {n} is found at the position {c}.')
+            break
+        i = i + 1
+        c = c + 1
+    else:
+        print(f'The given number {n} is not found in the list.')
+
+lst = [34,89,11,56,58,66,23]
+search(lst,77)
+
+todo *** Find a min value from a list using while loop ***
+def min_value(list):
+    min_value = list[0]
+    i = 1
+    c = 0
+    while i < len(list):
+        if list[i] < min_value :
+            min_value = list[i]
+            c = c + 1
+        i = i + 1
+    print(min_value,c)
+# lst = [112,78,50,14,58,90,64,77,31]
+min_value(lst)
+
+todo *** Everything about the tuple ***
+t1=(12,78,9,10,94,12,87,65,12)
+print(t1.count(12))
+print(t1[2])
+li_mix=["Harry",45,"Vinod",89,"Gary",77.23,True,45]
+li_mix[3] = "Raghu" #replacing
+li_mix.append(52)
+li_mix.remove("Vinod")
+li_mix.pop(4)
+print(li_mix)
+print(type(li_mix))
+print(li_mix[2])
+print(li_mix.count(45))
+print(li_mix.index(77.23))
+num = (12,0,45,0,88,0,55,0)
+print(num.count(0))
+print(num.index(88))
+
+todo *** About set ***
+s1 = set()
+To create an empty set
+s1.add(4)
+s1.add(4)
+set doesn't store repetitive items.So in this reason 4 is not stored twice.
+s1.add(5)
+s1.add(6)
+s1.add((12,58,10))
+We can add tuple inside a set
+s1.clear()
+will empty the set
+s1.remove(4)
+s1.add([12,58,10])  #But we can't add list and dictionary.
+Indexing is not possible in set.
+print(s1)
+
+todo *** In details about the dictionary ***
+my_dictionary = {
+    "name" : "Gary Anderson",
+    "father's name" : "Anthony Perrira",
+    "address" : "East Kanthal Para,Naihati",
+    "pin" : 743165,
+    "mob" : 9836567496
+}
+print("your options are : ",list(my_dictionary.keys()))
+If the word is not present in the dictionary then it will give an error.
+But in get method it will not give any error.
+x = input("Enter your enquiry : ")
+print(my_dictionary.get(x))
+Working on blank dictionary
+bio = {}
+name = input("Enter your name: ")
+adr = input("Enter your address: ")
+age = input("Enter your age: ")
+mob = input("enter your contact no. : ")
+bio["Name"] = name
+bio["Address"] = adr
+bio["Age"] = age
+bio["Contact No."] = mob
+bio["State"] = "WB"
+print(bio)
+
+my_dictionary["name"] = "Subrata Nandi"
+To change a value of a key
+print(my_dictionary["name"])
+print(my_dictionary["address"])
+print(my_dictionary["mob"])
+print(my_dictionary.keys())
+print(type(my_dictionary))
+print(list(my_dictionary.keys()))
+print(list(my_dictionary.values()))
+print((my_dictionary.items()))
+print both the key-value combinations by default in a tuple.But we can make it as list also.
+newdict = {'salary': 50000,'age': 29,'name':'Gour'}
+To add new item (key+value) in a existing dictionary
+my_dictionary.update(newdict)
+It also update the existing key+value pairs
+print(list(my_dictionary.keys())) # print as a list format
+print(list(my_dictionary.values()))
+print(list(my_dictionary.items()))
+print(my_dictionary['name1'])
+It will give error message.
+print(my_dictionary.get('name1'))
+It will give none value.
+
+todo if-else statement ***
+num = int(input("PLease enter the value : "))
+if num >15:
+    print("This is not a correct value.")
+else:
+    print("Your input is correct")
+
+****** make a list with user inputs:
+num1 = int(input("Enter the first no : "))
+num2 = int(input("Enter the second no : "))
+num3 = int(input("Enter the third no : "))
+num4 = int(input("Enter the fourth no : "))
+num_new = [num1,num2,num3,num4]
+print(num_new)
+
+****** Comparison between numbers :
+if num1>num2:
+    f1 = num1
+else:
+    f1 = num2
+if num3>num4:
+    f2 = num3
+else:
+    f2 = num4
+if f1>f2:
+    print("The greatest no. is  ",f1)
+else:
+    print("The greatest no. is  ",f2)
+
+todo *** Result of a classtest ***
+math = int(input("Enter the Mathematics no : "))
+sci = int(input("Enter the Science no : "))
+eng = int(input("Enter the English no : "))
+total_no = int(math+sci+eng)
+if total_no>=120 and math>=33 and sci>=33 and eng>=33:
+    print("The student is passed")
+else:
+    print("The student is not passed")
+print(total_no)
+
+todo *** Finding spam in a string ***
+text = str(input("Enter your comments : "))
+if('make a lot of money' in text):
+    print("It is a spam")
+elif("buy now" in text):
+    print("It is a spam")
+else:
+    print("This is not a spam")
+
+todo *** Simple while loop examples ***
+a = 10
+while a >=5 :
+    print(a,"I love my INDIA ")
+    a = a - 2
+*************
+fruits = ["Banana","Mango","Grapes","Apple"]
+i =0
+while i < len(fruits):
+    print(fruits[i],end = " ")
+    i = i + 1
+***************
+a = int(input("Enter the number you want: "))
+b = 1
+while b<15:
+    print(f"{b} x {a}  = {b*a}")
+    b = b + 1
+*********************************
+name = "GourRanjanChakraborty"
+i = 1
+while i <= len(name):
+    for j in name:
+        print(i,end = "")
+        print(j)
+        i = i + 1
+
+todo *** Sorting of a list of numbers ***
+lst = [12,87,16,-4,-10,52,4,60]
+def sort(list):
+    for i in range(len(lst)-1,0,-1):
+        for j in range(i):
+            if list[j] > list[j+1]:
+                list[j],list[j+1] = list[j+1], list[j]
+    print(list)
+sort(lst)
+todo *** Open_Read_Write_Append files ***
+f = open("../123.txt", 'r')
+r = f.read()
+r = f.readline() This will print only a single line
+r = f.read(29) This is will print first 29 characters.
+print(r)
+f.close()
+*** This function will overwrite the previous text ***
+f = open("123.txt",'w')
+data = f.write("Always use mask and sanitiser.\nAlways keep safe distance.")
+print(data)
+f.close()
+
+*** append
+f = open("123.txt","a")
+data = f.write("\nI Love my INDIA.")
+print(data)
+f.close()
+
+*** If there is no NewFile.txt file, then it will be created.
+f = open("NewFile.txt",'w')
+data = f.write("This is a Pythpn beautiful course.\nHope you will like it.")
+print(data)
+f.close()
+
+*** with-as we don't need any close()
+with open("NewFile.txt",'w') as f :
+    data = f.write("What is your birth place dear?\nI Don't know.")
+    print(data)
+    f.close()
+
+*** compare with a value and write in the file
+def val():
+    return 300
+point = val()
+
+with open("123.txt") as f :
+    data = f.read()
+    print(data)
+if data < str(point):
+    with open("123.txt",'w') as f1:
+        f1.write(str(point))
+else:
+    print("The value is already greater than point.")
+with open("123.txt") as f :
+    data = f.read()
+    print(data)
+
+for i in range(1,21):
+    with open(f'mul_tables{i}.txt', 'w') as f:
+        {i} - This will create all the different tables.txt
+        for j in range(1,11):
+                f.write(f'{i} x {j} = {i*j}\n')
+
+
+*** Replacing word in a file
+with open("sample.txt") as f:
+    data = f.read()
+    data = data.replace("Ravi","Ranjan")
+with open("sample.txt","w") as f:
+    f.write(data)
+with open("sample.txt") as f:
+    data = f.read()
+    print(data)
+
+1.Replace certain words
+words = ["bandar","mota","saitan","kutta"]
+with open("sample.txt")as f:
+    data =f.read()
+for i in words:
+    data = data.replace(i,"#@%$")
+with open("sample.txt","w")as f:
+    f.write(data)
+
+*** Search from a log file
+with open("sample.txt") as f:
+    data = f.read()
+    data = data.lower()
+if 'python' in data:
+    print("There is python in the log file.")
+else:
+    print("There is no python in the log file.")
+
+*** To search the line nos. of a text #
+with open("sample.txt")as f:
+    content = True
+    c = 1
+    while content:
+        content = f.readline()
+        if 'python' in content.lower():
+            print(f'Python present in the {c} no. line.')
+        c = c + 1
+
+*** create and copy one file to another
+with open("sample.txt") as f :
+    content = f.read()
+with open("sample1.txt",'w') as f :
+    f.write(content)
+
+*** Find files are identical or not
+with open("sample.txt")as f:
+    c1 = f.read()
+with open("sample1.txt")as f:
+    c2 = f.read()
+if c1 == c2:
+    print("The files are IDENTICAL.")
+else:
+    print("The files are not IDENTICAL.")
+
+*** To delete the content of a file
+with open("sample.txt") as f:
+    c = f.read()
+with open("sample.txt",'w') as f :
+    f.write(" ")
+
+*** To rename a file
+import os
+with open("sample1.txt") as f:
+    content = f.read()
+with open("renamed_by_python.txt","w") as f1:
+    f1.write(content)
+*** You have to import os module for remove method
+os.remove("sample1.txt")
+
+***Image Opening
+from PIL import Image
+with open("IMG_001.jpg",'rb') as f:
+    img = Image.open(f)
+    img.show()
+    f.close()
+todo *** Class & Methods ***
+class Student:
+    school = '"Adarsha Vidyalaya"'
+    def __init__(self,m1,m2,m3):
+        self.m1 = m1
+        self.m2= m2
+        self.m3 = m3
+    def avg(self): # This is an instance method because we passing self.
+        return ((self.m1+self.m2+self.m3)/3)
+    @classmethod
+    def info(cls): # This is called class method.
+        return cls.school
+    @staticmethod
+    def greet():   # This is static method without self.
+        print("Students, wish you all the best.You must learn Python.")
+
+s1 = Student(75,82,65)
+s2 = Student(84,45,69)
+s3 = Student(86,64,96)
+print(Student.info())
+print(s1.avg())
+print(s2.avg())
+print(s3.avg())
+Student.greet()
+
+
+*********** Single class but different methods execution
+class A:
+    def __init__(self):
+        self.m1 = 77
+        self.m2 = 85
+        self.m3 = 90
+
+    def avg(self):
+        print(self.m1, self.m2, self.m3)
+        print((self.m1+self.m2 +self.m3)/3)
+
+a = A()
+a.m1 = 56
+a.avg()
+
+*********************************
+class Marks:
+    def __init__(self):
+        self.lit = self.literature()
+        self.art = self.arts()
+        self.sci = self.science()
+
+    def literature(self):
+        self.beng1 = 69
+        self.beng2 = 74
+        self.eng = 82
+        return (f'Beng1 ={self.beng1},Beng2 ={self.beng2},Eng = {self.eng}')
+
+    def arts(self):
+        self.his = 81
+        self.geo = 92
+        return(f'History = {self.his},Geography = {self.geo}')
+
+    def science(self):
+        self.math = 98
+        self.sci = 96
+        self.bio = 94
+        return(f'Mathematics = {self.math}, Science = {self.sci}, Biology = {self.bio}')
+    def info(self):
+        print(self.lit)
+        print(self.art)
+        print(self.sci)
+
+m1 = Marks()
+m1.info()
+
+***********************
+Calling methods from one class to another
+class A:
+    def __init__(self):
+        self.eng = 77
+        self.beng = 69
+
+    def info(self):
+        print(f'English = {self.eng},Bengali = {self.beng}')
+   ####This is from class B
+        print(B().info())
+    #### This is from class C
+        print(C().info())
+class B:
+    def __init__(self):
+        self.math = 89
+        self.sci = 91
+    def info(self):
+        return (f'Math = {self.math},Science = {self.sci}')
+class C:
+    def __init__(self):
+        self.a = 37
+        self.b = 41
+    def info(self):
+        return (f'a = {self.a},b = {self.b}')
+
+s1 = A()
+s1.info()
+
+********************
+class Sports:
+    def __init__(self):
+        self.t1 = "ManU"
+        self.t2 = "RealMadrid"
+        self.t3 = "ParisSaJa"
+        self.t4 = "KolkataNight"
+        self.t5 = "MumbaiInd"
+        self.t6 = "RCB"
+        self.oth = self.Name()
+
+    def info(self):
+        print(self.t1,self.t2,self.t3,self.t4,self.t5,self.t6 )
+        return (self.oth.info())
+
+
+    class Name:
+        def __init__(self):
+            self.n1 = "Virat Kohli"
+            self.n2 = "Sunil Chetry"
+            self.n3 = "Niraj Chopra"
+        def info(self):
+            print("The three highest paid sports person in India are ",self.n1,',',self.n2,',',self.n3)
+
+s1 = Sports()
+s1.info()
+
+**** Super class/multiple & multi level inheritance
+
+class Person:
+    company = "YouTube"
+    country = "India"
+    salary = 7000
+    def __init__(self):
+        print("Person Initialisation.")
+    def takeBreath(self):
+        print("Person is breathing normaly ....")
+    def getSalary(self):
+        print(f'Salary of the person =  {self.salary}')
+
+class Employee(Person):
+    company = "Honda"
+    salary = 5000
+    def getSalary(self):
+        print(f'Salary is {self.salary}')
+    def takeBreath(self):
+        super().takeBreath()
+        print("Employee taking breathing comfortably....")
+
+class Programmer(Employee):
+    def __init__(self):
+        super().__init__()
+    company = "Fiverr"
+    def getSalary(self):
+      print("No salary to the programmer in this month.")
+    def takeBreath(self):
+#This will call it's superclass,i.e. here superclass = Employee).
+        super().takeBreath()
+        print("Programmer also breathing well....")
+
+# p = Person()
+e = Employee()
+# pr = Programmer()
+
+e.takeBreath()
+
+*****************************
+class Employee:
+    company = "Tata Motors"
+    salary = 15000
+    bonus = 500
+
+    # ** This is normal function and for the o/p we call as function :(print(e.totalsalary())
+    # def totalsalary(self):
+    #     return (self.salary + self.bonus)
+    @property
+    # This is called property decorator(also getter method)
+    def totalsalary(self):
+        return (self.salary + self.bonus)
+    @totalsalary.setter
+    def totalsalary(self,val):
+        self.bonus = val - self.salary
+
+
+e = Employee()
+
+# print(e.totalsalary)
+e.salary = 8900
+print(e.totalsalary)
+print(e.bonus)
+# print(e.bonus)
+
+*******************************
+getter-setter
+
+class Company:
+    name = "HONDA INDIA"
+    salary = 13000
+    salarybonus = 500
+    @property
+    # This is also called getter method
+    def totalsalary(self):
+        return (self.salary + self.salarybonus)
+    @totalsalary.setter
+    def totalsalary(self,val):
+        self.salarybonus = val - self.salary
+
+c1 = Company()
+c1.totalsalary = 13790
+print(c1.totalsalary)
+print(c1.salarybonus)
+
+******** Operatot overloading ************
+https://www.geeksforgeeks.org/operator-overloading-in-python/
+    def __init__(self,num):
+        self.num = num
+
+    def __add__(self,other):
+        return(self.num + other.num)
+
+n1 = Number(20)
+n2 = Number(30)
+print(n1+n2)
+**********************
+class Number:
+    def __init__(self,a,b,c):
+        self.a = a
+        self.b = b
+        self.c = c
+    def __add__(self, other):
+        return (self.a +other.a, self.b + other.b,self.c + other.c)
+
+c1 = Number("Tom","Julia"," Will")
+c2 = Number(" Hanks"," Robert"," Smith")
+c3 = c1 + c2
+
+c4 = Number(14,25,21)
+c5 = Number(36,58,12)
+c6 = c4 + c5
+print (c3)
+print (c6)
+******
+class A:
+    def __init__(self, a):
+        self.a = a
+    def __gt__(self, other):
+
+        if(self.a>other.a):
+            return True
+        else:
+            return False
+ob1 = A(4)
+ob2 = A(30)
+if(ob1>ob2):
+    print("ob1 is greater than ob2")
+else:
+    print("ob2 is greater than ob1")
+************
+class vec2d:
+    def __init__(self,i,j):
+        self.icap = i
+        self.jcap = j
+    def __str__(self):
+        return f'{self.icap}i + {self.jcap}j'
+
+class vec3d(vec2d):
+    def __init__(self,i,j,k):
+        super().__init__(i,j)
+        self.kcap = k
+    def __str__(self):
+        return f'{self.icap}i + {self.jcap}j + {self.kcap}k'
+
+v2 = vec2d(2,3)
+v3 = vec3d(4,5,6)
+print(v2)
+print(v3)
+
+class car_details:
+    def __init__(self):
+        self.brand = " "
+        self.model = " "
+        self.color = " "
+        self.price = " "
+    def getdetails(self):
+        print("The company is",self.brand)
+        print("The model is",self.model)
+        print("The color is",self.color)
+        print("The price is",self.price)
+    def setdetails(self,brand,model,color,price):
+        self.brand = brand
+        self.model = model
+        self.color = color
+        self.price = price
+obj1 = car_details()
+obj1.setdetails("'Maruti'","'Boleno'","'Blue'",872754)
+obj1.getdetails()
+
+******'THREADING AND TIMER'********
+from threading import*
+from time import*
+class hello(Thread):
+    def run(self):
+        for g in range(5):
+            print("Gour")
+            sleep(2)
+class hi(Thread):
+    def run(self):
+        for r in range(5):
+            print("Ranjan")
+            sleep(2)
+class by(Thread):
+    def run(self):
+        for c in range(5):
+            print("Chakraborty")
+            print('*******')
+            sleep(2)
+h1=hello()
+h2=hi()
+h3=by()
+h1.start()
+sleep(.5)
+h2.start()
+sleep(.5)
+h3.start()
+
+h1.join()
+h2.join()
+h3.join()
+
+print("Thanks ....")
+
+'********ERROR HANDLING:TRY,EXCEPTION,FINALLY*******'
+A = 55
+B = 0
+try:
+    print("Resource Open")
+    print(A/B)
+    x = int(input("Enter 1st value: "))
+    y = int(input("Enter 2nd value: "))
+    print(x*y)
+except ZeroDivisionError  as e:
+    print("Your input should not be Zero,","Error:",e)
+except ValueError as e:
+    print("Please enter a proper value;","Error:", e)
+except Exception as e:
+    print("Please check your input", "Error:", e)
+finally:
+    print("Resource Close")
+
+*********MULTITHREADING********
+from threading import *
+from time import *
+class name(Thread):
+    def run(self):
+        for i in range(5):
+            print("My name : Jakir")
+            sleep(2)
+class surname(Thread):
+    def run(self):
+        for e in range(5):
+            print("Title : Khan")
+            sleep(2)
+
+n1 = name()
+n2 = surname()
+
+n1.start()
+sleep(.2)
+n2.start()
+n1.join()
+n2.join()
+todo *** To find the Grade/Result of the Students ***
+_Name_of_the_student = str(input("Enter the name of the student : "))
+_Marks_of_the_student = int(input("Enter the marks of the student : "))
+
+def grade_finder(_Marks_of_the_student):
+    if _Marks_of_the_student >= 90:
+        print(f"{_Name_of_the_student} got {_Marks_of_the_student}. So Grade is A+")
+    else:
+        if 90 > _Marks_of_the_student >=80:
+            print(f"{_Name_of_the_student} got {_Marks_of_the_student}. So Grade is A")
+        else:
+            if 80>_Marks_of_the_student >=70:
+                print(f"{_Name_of_the_student} got {_Marks_of_the_student}. So Grade is B+")
+            else:
+                if 70 > _Marks_of_the_student >= 60:
+                    print(f"{_Name_of_the_student} got {_Marks_of_the_student}. So Grade is B")
+                else:
+                    if 60 > _Marks_of_the_student >=50:
+                        print(f"{_Name_of_the_student} got {_Marks_of_the_student}. So Grade is C+")
+                    else:
+                        if 50 > _Marks_of_the_student >= 40:
+                            print(f"{_Name_of_the_student} got {_Marks_of_the_student}. So Grade is C")
+                        else :
+                            if _Marks_of_the_student < 40:
+                                 print(f'The marks of the student {_Marks_of_the_student}')
+                                 print("The student has failed to appear in the next class.")
+
+grade_finder(_Marks_of_the_student)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
