@@ -1,4 +1,5 @@
-*** String details and examples ***
+************* String details and examples ***************
+
 name = "gouranjan chakraborty"
 address = ("East Katal Para\nMadral Road \t\t Naihati")
 \t is tab & \n is new line
@@ -24,7 +25,10 @@ selection ="Congrats !!! Dear customer your booking request for the Ladakh trip 
 selection = selection.replace("customer",name)
 selection = selection.replace("date",date)
 print(selection)
-todo *** Add user inputs in a list ***
+
+********************************************************************************************************
+*** Add user inputs in a list ***
+
 def list_add():
     s = []
     n =int(input("How many numbers do you have ? : "))
