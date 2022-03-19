@@ -1,5 +1,6 @@
-************* String details and examples ***************
-
+ *******************************
+  String details and examples
+ *******************************
 name = "gouranjan chakraborty"
 address = ("East Katal Para\nMadral Road \t\t Naihati")
 \t is tab & \n is new line
@@ -15,8 +16,10 @@ print(name.count("go"))
 print(name.capitalize())
 print(name.find("ch"))
 String replacement:
+*********************
 name = "gouranjan go chakraborty"
-address = ("East Katal Para\nMadral Road \t\t Naihati")#\t is tab & \n is new line
+address = ("East Katal Para\nMadral Road \t\t Naihati") 
+#\t is tab & \n is new line
 print(name.replace("chakraborty","chatterjee"))
 print(address.replace("Katal","Kanthal"))
 name = input("Enter your name : ")
@@ -25,129 +28,27 @@ selection ="Congrats !!! Dear customer your booking request for the Ladakh trip 
 selection = selection.replace("customer",name)
 selection = selection.replace("date",date)
 print(selection)
-
-********************************************************************************************************
-*** Add user inputs in a list ***
-
-def list_add():
-    s = []
-    n =int(input("How many numbers do you have ? : "))
-    for i in range(n):
-        x = int(input("Enter your no. : "))
-        s.append(x)
-    print("Your numbers are : " , s)
-list_add()
-todo *** Sum of numbers in a given list ***
-    c=0
-    for k in s:
-        c = c + k
-    print("The SUM of the numbers : ",c)
-list_add()
-todo *** The user input no. is Prime or composite ***
-n = int(input("Enter a number : "))
-#Prime or composite
-for i in range(2,n-1):
-    if n % i == 0:
-        print("The given no. is composite")
-        break
-else:
-    print("The given no. is prime")
-todo *** Function to find a user given number is prime or composite ***
-def prime_compo():
-    n = int(input("Enter a number : "))
-    for i in range(2,n-1):
-        if n % i == 0:
-            print("The given no. is composite")
-            return False
-    else:
-        print("The given no. is prime")
-        return True
-prime_compo()
-todo *** Using the function find prime or composite numbers from a list ***
-lst = [12,54,87,91,31,41,29]
-prime = []
-compo = []
-n = 0
-while n < len(lst):
-    if prime_compo(lst[n]):
-        prime.append(lst[n])
-    else:
-        compo.append(lst[n])
-    n = n + 1
-print("The prime numbers are : ", end = " ")
-for m in prime:
-    print(m, end = " ")
-print()
-# print(compo)
-print("The composite numbers are : ", end = " ")
-for m in compo:
-    print(m, end = " ")
-else:
-    print("Pri")
-
-todo *** Find even and odd nos. from a list ***
-x = [12,21,33,45,87,64]
-even = []
-odd = []
-n = 0
-while n < len(x):
-    if x[n] % 2 == 0:
-        even.append(x[n])
-    else:
-        odd.append(x[n])
-    n = n + 1
-c1 = len(even)
-c2 = len(odd)
-print(f'There are {c1} even nos. : {even}')
-print(f'There are {c2} odd nos. : {odd}')
-todo *** A simple calculator ***
-a = int(input("Enter the 1st value : "))
-b = int(input("Enter the 2nd value : "))
-print('Operators are --> +, -, * , /')
-opr = input("Enter the operator: ")
-if opr=='+' :
-    print("The sum of two nos. : ",a+b)
-elif opr == '-':
-    print("The difference of two nos. : ", abs(a - b))
-elif opr == '*':
-    print("The product of two nos. : ", (a * b))
-elif opr == '-':
-    print("The division of two nos. : ", (a /b))
-else:
-    print('''***Please choose your operator properly
-& start your program again***''')
-
-todo *** Search a number from a list ***
-def search(list,n):
-    i = 0
-    c=1
-    while i < len(list):
-        if list[i] == n:
-            print(f'The given number {n} is found at the position {c}.')
-            break
-        i = i + 1
-        c = c + 1
-    else:
-        print(f'The given number {n} is not found in the list.')
-
-lst = [34,89,11,56,58,66,23]
-search(lst,77)
-
-todo *** Find a min value from a list using while loop ***
-def min_value(list):
-    min_value = list[0]
-    i = 1
-    c = 0
-    while i < len(list):
-        if list[i] < min_value :
-            min_value = list[i]
-            c = c + 1
-        i = i + 1
-    print(min_value,c)
-# lst = [112,78,50,14,58,90,64,77,31]
-min_value(lst)
-
-todo *** Everything about the tuple ***
+*******************
+    About set 
+*******************
+s1 = set()
+To create an empty set
+s1.add(4)
+s1.add(4)
+set doesn't store repetitive items.So in this reason 4 is not stored twice.
+s1.add(5)
+s1.add(6)
+s1.add((12,58,10))
+We can add tuple inside a set
+s1.clear()
+will empty the set
+s1.remove(4)
+s1.add([12,58,10])  #But we can't add list and dictionary.
+Indexing is not possible in set.
+print(s1)
+********************************
+  Everything about the tuple
+********************************
 t1=(12,78,9,10,94,12,87,65,12)
 print(t1.count(12))
 print(t1[2])
@@ -164,25 +65,9 @@ print(li_mix.index(77.23))
 num = (12,0,45,0,88,0,55,0)
 print(num.count(0))
 print(num.index(88))
-
-todo *** About set ***
-s1 = set()
-To create an empty set
-s1.add(4)
-s1.add(4)
-set doesn't store repetitive items.So in this reason 4 is not stored twice.
-s1.add(5)
-s1.add(6)
-s1.add((12,58,10))
-We can add tuple inside a set
-s1.clear()
-will empty the set
-s1.remove(4)
-s1.add([12,58,10])  #But we can't add list and dictionary.
-Indexing is not possible in set.
-print(s1)
-
-todo *** In details about the dictionary ***
+*********************************
+ In details about the dictionary
+*********************************
 my_dictionary = {
     "name" : "Gary Anderson",
     "father's name" : "Anthony Perrira",
@@ -230,23 +115,160 @@ print(my_dictionary['name1'])
 It will give error message.
 print(my_dictionary.get('name1'))
 It will give none value.
-
-todo if-else statement ***
+****************************
+ Add user inputs in a list
+****************************
+def list_add():
+    s = []
+    n =int(input("How many numbers do you have ? : "))
+    for i in range(n):
+        x = int(input("Enter your no. : "))
+        s.append(x)
+    print("Your numbers are : " , s)
+list_add()
+*********************************
+  Sum of numbers in a given list
+*********************************
+    c=0
+    for k in s:
+        c = c + k
+    print("The SUM of the numbers : ",c)
+list_add()
+********************
+ if-else statement
+********************
 num = int(input("PLease enter the value : "))
 if num >15:
     print("This is not a correct value.")
 else:
     print("Your input is correct")
 
-****** make a list with user inputs:
+*********************************************
+   The user input no. is Prime or composite 
+*********************************************
+n = int(input("Enter a number : "))
+#Prime or composite
+for i in range(2,n-1):
+    if n % i == 0:
+        print("The given no. is composite")
+        break
+else:
+    print("The given no. is prime")
+  **************************************************************
+    Function to find a user given number is prime or composite 
+  **************************************************************
+def prime_compo():
+    n = int(input("Enter a number : "))
+    for i in range(2,n-1):
+        if n % i == 0:
+            print("The given no. is composite")
+            return False
+    else:
+        print("The given no. is prime")
+        return True
+prime_compo()
+*****************************************************************
+  Using the function find prime or composite numbers from a list
+*****************************************************************
+lst = [12,54,87,91,31,41,29]
+prime = []
+compo = []
+n = 0
+while n < len(lst):
+    if prime_compo(lst[n]):
+        prime.append(lst[n])
+    else:
+        compo.append(lst[n])
+    n = n + 1
+print("The prime numbers are : ", end = " ")
+for m in prime:
+    print(m, end = " ")
+print()
+# print(compo)
+print("The composite numbers are : ", end = " ")
+for m in compo:
+    print(m, end = " ")
+else:
+    print("Pri")
+***************************************
+   Find even and odd nos. from a list
+***************************************
+x = [12,21,33,45,87,64]
+even = []
+odd = []
+n = 0
+while n < len(x):
+    if x[n] % 2 == 0:
+        even.append(x[n])
+    else:
+        odd.append(x[n])
+    n = n + 1
+c1 = len(even)
+c2 = len(odd)
+print(f'There are {c1} even nos. : {even}')
+print(f'There are {c2} odd nos. : {odd}')
+*********************************************
+ A simple calculator 
+**********************
+a = int(input("Enter the 1st value : "))
+b = int(input("Enter the 2nd value : "))
+print('Operators are --> +, -, * , /')
+opr = input("Enter the operator: ")
+if opr=='+' :
+    print("The sum of two nos. : ",a+b)
+elif opr == '-':
+    print("The difference of two nos. : ", abs(a - b))
+elif opr == '*':
+    print("The product of two nos. : ", (a * b))
+elif opr == '-':
+    print("The division of two nos. : ", (a /b))
+else:
+    print('''***Please choose your operator properly
+& start your program again***''')
+***********************************
+  Search a number from a list 
+***********************************
+def search(list,n):
+    i = 0
+    c=1
+    while i < len(list):
+        if list[i] == n:
+            print(f'The given number {n} is found at the position {c}.')
+            break
+        i = i + 1
+        c = c + 1
+    else:
+        print(f'The given number {n} is not found in the list.')
+
+lst = [34,89,11,56,58,66,23]
+search(lst,77)
+***************************************************
+  Find a min value from a list using while loop
+***************************************************
+def min_value(list):
+    min_value = list[0]
+    i = 1
+    c = 0
+    while i < len(list):
+        if list[i] < min_value :
+            min_value = list[i]
+            c = c + 1
+        i = i + 1
+    print(min_value,c)
+# lst = [112,78,50,14,58,90,64,77,31]
+min_value(lst)
+********************************
+  make a list with user inputs:
+********************************
 num1 = int(input("Enter the first no : "))
 num2 = int(input("Enter the second no : "))
 num3 = int(input("Enter the third no : "))
 num4 = int(input("Enter the fourth no : "))
 num_new = [num1,num2,num3,num4]
 print(num_new)
-
-****** Comparison between numbers :
+*******************************
+ Comparison between numbers :
+*******************************
 if num1>num2:
     f1 = num1
 else:
@@ -259,8 +281,9 @@ if f1>f2:
     print("The greatest no. is  ",f1)
 else:
     print("The greatest no. is  ",f2)
-
-todo *** Result of a classtest ***
+************************
+  Result of a classtest
+************************
 math = int(input("Enter the Mathematics no : "))
 sci = int(input("Enter the Science no : "))
 eng = int(input("Enter the English no : "))
@@ -270,8 +293,9 @@ if total_no>=120 and math>=33 and sci>=33 and eng>=33:
 else:
     print("The student is not passed")
 print(total_no)
-
-todo *** Finding spam in a string ***
+*****************************
+  Finding spam in a string
+*****************************
 text = str(input("Enter your comments : "))
 if('make a lot of money' in text):
     print("It is a spam")
@@ -279,25 +303,26 @@ elif("buy now" in text):
     print("It is a spam")
 else:
     print("This is not a spam")
-
-todo *** Simple while loop examples ***
+****************************
+ Simple while loop examples
+****************************
 a = 10
 while a >=5 :
     print(a,"I love my INDIA ")
     a = a - 2
-*************
+**********************************************
 fruits = ["Banana","Mango","Grapes","Apple"]
 i =0
 while i < len(fruits):
     print(fruits[i],end = " ")
     i = i + 1
-***************
+**********************************************
 a = int(input("Enter the number you want: "))
 b = 1
 while b<15:
     print(f"{b} x {a}  = {b*a}")
     b = b + 1
-*********************************
+**********************************************
 name = "GourRanjanChakraborty"
 i = 1
 while i <= len(name):
@@ -305,8 +330,9 @@ while i <= len(name):
         print(i,end = "")
         print(j)
         i = i + 1
-
-todo *** Sorting of a list of numbers ***
+ *******************************
+  Sorting of a list of numbers
+ *******************************
 lst = [12,87,16,-4,-10,52,4,60]
 def sort(list):
     for i in range(len(lst)-1,0,-1):
@@ -315,7 +341,9 @@ def sort(list):
                 list[j],list[j+1] = list[j+1], list[j]
     print(list)
 sort(lst)
-todo *** Open_Read_Write_Append files ***
+******************************
+ Open_Read_Write_Append files 
+******************************
 f = open("../123.txt", 'r')
 r = f.read()
 r = f.readline() This will print only a single line
@@ -327,30 +355,30 @@ f = open("123.txt",'w')
 data = f.write("Always use mask and sanitiser.\nAlways keep safe distance.")
 print(data)
 f.close()
-
-*** append
+***********
+  append
+***********
 f = open("123.txt","a")
 data = f.write("\nI Love my INDIA.")
 print(data)
 f.close()
-
-*** If there is no NewFile.txt file, then it will be created.
+************************************************************************
+If there is no NewFile.txt file, then it will be created automatically
+************************************************************************
 f = open("NewFile.txt",'w')
 data = f.write("This is a Pythpn beautiful course.\nHope you will like it.")
 print(data)
 f.close()
-
-*** with-as we don't need any close()
+*************************************
+ 'with-as' we don't need any close()
+*************************************
 with open("NewFile.txt",'w') as f :
     data = f.write("What is your birth place dear?\nI Don't know.")
     print(data)
     f.close()
-
-*** compare with a value and write in the file
-def val():
-    return 300
-point = val()
-
+********************************************
+ compare with a value and write in the file
+********************************************
 with open("123.txt") as f :
     data = f.read()
     print(data)
@@ -380,7 +408,7 @@ with open("sample.txt") as f:
     data = f.read()
     print(data)
 
-1.Replace certain words
+Replace certain words
 words = ["bandar","mota","saitan","kutta"]
 with open("sample.txt")as f:
     data =f.read()
