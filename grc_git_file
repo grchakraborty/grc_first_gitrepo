@@ -1,0 +1,9 @@
+# *** Add user inputs in a list 
+ def list_add():
+    s = []
+     n =int(input("How many numbers do you have ? : "))
+     for i in range(n):
+         x = int(input("Enter your no. : "))
+         s.append(x)
+     print("Your numbers are : " , s)
+ list_add()
