@@ -1,4 +1,4 @@
-todo *** String details and examples ***
+*** String details and examples ***
 name = "gouranjan chakraborty"
 address = ("East Katal Para\nMadral Road \t\t Naihati")
 \t is tab & \n is new line
